@@ -1,2 +1,0 @@
-本文为个人博客项目，参照：https://github.com/zmrenwu/django-blog-tutorial
-功能实现：全文搜索，统计文章阅读量，文章评论等
