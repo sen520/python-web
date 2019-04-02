@@ -1,0 +1,21 @@
+{% extends 'main_top.html' %}
+
+{% block main %}
+    <table align="center">
+
+        <form action="updatebook.html/{{ books.id }}" method="post">
+            <tr>
+                <td>{{ books.name }}:</td>
+            </tr>
+            <tr>
+                <td>书架名称：</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="提交"></td>
+            </tr>
+
+
+        </form>
+    </table>
+{% endblock main %}
