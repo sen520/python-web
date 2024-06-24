@@ -1,0 +1,12 @@
+{
+  "_default": {
+    "1": {
+      "name": "users",
+      "id": 10
+    },
+    "2": {
+      "name": "messages",
+      "id": 1
+    }
+  }
+}
