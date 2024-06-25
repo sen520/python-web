@@ -4,6 +4,7 @@ from flask_restx import Api, Resource, fields, reqparse
 
 from apps.user import api
 from controllers.db import *
+from controllers.mysql_db import UserDAO
 
 ns = api.namespace('user', description='user operations')
 
@@ -56,6 +57,13 @@ class UserRegister(Resource):
     @ns.response(404, 'not found')
     def post(self):
         """ post method """
+        u = UserDAO.get_all()
+        print(u, '22222')
+        u = UserDAO.get_by_id(9)
+        print(u, '22222')
+        UserDAO.update(8, username='zs')
+
+        UserDAO.delete(7)
         # self.user_ctl.add(username='test')
         result = {"code": 0, "msg": "注册成功"}
         return result

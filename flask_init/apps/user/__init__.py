@@ -1,4 +1,4 @@
-from apps import app, api
+from apps import api
 from apps.user.resource import ns as user_ns
 # from .resource import UserRegisterView
 
