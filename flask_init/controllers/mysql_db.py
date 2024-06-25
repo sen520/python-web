@@ -5,11 +5,12 @@ class UserDAO:
 
     @classmethod
     def get_all(cls):
-        return User.query.all()
+        return [u.__json__() for u in User.query.all()]
 
     @classmethod
     def get_by_id(cls, id):
-        return User.query.filter_by(id=id).first()
+        user = User.query.filter_by(id=id).first()
+        return user.__json__() if user else None
 
     @classmethod
     def add(cls, **kwargs):
@@ -30,5 +31,3 @@ class UserDAO:
         User.query.filter_by(id=id).delete()
         db.session.commit()
         return 'success'
-
-
