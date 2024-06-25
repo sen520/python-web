@@ -17,6 +17,11 @@
     
     api.add_namespace(user_ns) # 注册命名空间
   ```
+- mysql读写分离
+
+  -  models/mysql_model
+  -  controllers/mysql_db
+
 - 实现功能
   - mysql主从读写分离
   - jwt
