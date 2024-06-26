@@ -1,3 +1,3 @@
-from util.mysql_util import RoutingSQLAlchemy
+from util.mysql import RoutingSQLAlchemy
 
 db = RoutingSQLAlchemy()

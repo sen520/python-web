@@ -4,8 +4,8 @@ from flask import Flask
 from flask_restx import Api
 
 from settings import Config
-from util.log_util import log_config
-from util.gpt_util import Chat
+from util.log import log_config
+from util.gpt import Chat
 from util import db
 
 log_config(file_path=Config.LOG_PATH, file_name=Config.LOG_NAME,
