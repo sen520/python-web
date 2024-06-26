@@ -4,7 +4,7 @@ from flask_restx import Api, Resource, fields, reqparse
 
 from apps.user import api
 from controllers.db import *
-from controllers.mysql_db import UserDAO
+from controllers.mysql_db import UserDAO, MainSqlUtil
 
 ns = api.namespace('user', description='user operations')
 
@@ -65,6 +65,10 @@ class UserRegister(Resource):
 
         UserDAO.delete(7)
         # self.user_ctl.add(username='test')
+
+        MainSqlUtil.execute('delete from user where id = %s', (9))
+        res = MainSqlUtil.execute_query('select * from user where id =%s', (6))
+        self.logger.warning(res)
         result = {"code": 0, "msg": "注册成功"}
         return result
 

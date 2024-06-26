@@ -21,6 +21,7 @@
 
   -  models/mysql_model
   -  controllers/mysql_db
+  -  自定义mysql单机连接，执行sql（主要解决：读写分离后，使用db.session.execute走的是读的服务器）
 
 - 实现功能
   - mysql主从读写分离
